@@ -27,6 +27,29 @@
             sentence now has a value of "My name is Denis";
 
             */
+
+            /*string myName;
+            Console.WriteLine("Please enter your name and press Enter");
+            myName = Console.ReadLine();
+            Console.WriteLine(myName.ToUpper());
+            Console.WriteLine(myName.ToLower());
+            Console.WriteLine(myName.Trim());
+            Console.WriteLine(myName.Substring(3));*/
+
+            Console.Write("Enter a string here: ");
+            string newString = Console.ReadLine();
+            Console.Write("Enter the character to search: ");
+            char newChar = Console.ReadLine()[0];
+            int index = newString.IndexOf(newChar);
+            Console.WriteLine($"The index of the character {newChar} in string {newString} is: {index}");
+            Console.Write("Enter your first name:");
+            string firstName = Console.ReadLine();
+
+            Console.Write("Enter your last name:");
+            string lastName = Console.ReadLine();
+            Console.WriteLine($"{firstName} {lastName}");
+
+
         }
     }
 }
