@@ -3,16 +3,12 @@
     internal class ClientActivity
     {
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            string myString = "15";
-            string mySecondString = "13";
-            int num1 = Int32.Parse(myString);
-            int num2 = Int32.Parse(mySecondString);
-            int resultInt = num1 + num2;
-            string result = myString + mySecondString;
-            Console.WriteLine(resultInt);
-            Console.Read();
+            string stringForFloat = "0.85"; // datatype should be float
+            float floatedString = float.Parse(stringForFloat);
+            string stringForInt = "12345"; // datatype should be int
+            int intString = int.Parse(stringForInt);
         }
     }
 }
