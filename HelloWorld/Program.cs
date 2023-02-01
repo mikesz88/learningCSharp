@@ -1,31 +1,33 @@
 ﻿namespace HelloWorld
 {
-    // Pascal Case that are nouns
     internal class ClientActivity
     {
-        // Entry point of our program
-        // Method names like CalculateValue
-        // method args like firstNumber
+
         static void Main(string[] args)
         {
-            // local variables like itemCount
+            // implicit conversion
+            int num = 12390532;
+            long bigNum = num;
 
-            // use userControl instead of usrCtr
+            float myFloat = 13.37f;
+            double myNewDouble = myFloat;
 
-            // don't use numbers at the start of variable names
-            // avoid underscore
+            double myDouble = 13.37;
+            int myInt;
+            // explicit conversion
+            // cast double to int;
+            myInt = (int)myDouble;
 
-            /*
-                Correct: 
-                string myName;
-                int lastNum;
-                bool isSaved;
-            */
+            // typeConversion
+            string myString = myDouble.ToString(); // "13.37"
+            string myStringFloat = myFloat.ToString();
+            bool sunIsShining = false;
+            string myBoolString = sunIsShining.ToString();
 
-            // Avoid
-            // String myName;
-            // Int32 lastNum;
-            // Boolean isSaved;
+            Console.WriteLine(myString);
+            Console.WriteLine(myStringFloat);
+            Console.WriteLine(myBoolString);
+            Console.Read();
         }
     }
 }
