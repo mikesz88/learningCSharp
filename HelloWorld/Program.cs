@@ -8,15 +8,25 @@
 
         static void Main(string[] args)
         {
-            GreetFriend(name1);
-            GreetFriend(name2);
-            GreetFriend(name3);
-            Console.Read();
+            string s = "HeY ThErE !";
+
+            /// Change nothing down here 
+            s = LowUpper(s);
+            Console.WriteLine(s);
+            Count(s);
         }
 
-        public static void GreetFriend(string name)
+        public static string LowUpper(string s)
         {
-            Console.WriteLine($"Hi {name}, my friend!");
+            string lower = s.ToLower();
+            string upper = s.ToUpper();
+            string lowerUpper = lower + upper;
+            return lowerUpper;
+        }
+
+        public static void Count(string s) 
+        {
+            Console.WriteLine($"The amount of characters is {s.Length}.");
         }
 
     }
