@@ -8,25 +8,34 @@
 
         static void Main(string[] args)
         {
-            string s = "HeY ThErE !";
+            Console.WriteLine(AddTwoNumbers());
+            Console.WriteLine(Calculate());
+            Console.Read();
 
-            /// Change nothing down here 
-            s = LowUpper(s);
-            Console.WriteLine(s);
-            Count(s);
         }
 
-        public static string LowUpper(string s)
+        public static double AddTwoNumbers()
         {
-            string lower = s.ToLower();
-            string upper = s.ToUpper();
-            string lowerUpper = lower + upper;
-            return lowerUpper;
+            Console.WriteLine("Please the first number");
+            string num1 = Console.ReadLine()!;
+            Console.WriteLine("Please the second number");
+            string num2 = Console.ReadLine()!;
+            double sum = double.Parse(num1) + double.Parse(num2);
+            return sum;
         }
 
-        public static void Count(string s) 
+        public static int Calculate()
         {
-            Console.WriteLine($"The amount of characters is {s.Length}.");
+            Console.WriteLine("Please enter the first number");
+            string number1Input = Console.ReadLine()!;
+            Console.WriteLine("Please enter the second number");
+            string number2Input = Console.ReadLine()!;
+
+            int num1 = int.Parse(number1Input);
+            int num2 = int.Parse(number2Input);
+
+            int result = num1 + num2;
+            return result;
         }
 
     }
