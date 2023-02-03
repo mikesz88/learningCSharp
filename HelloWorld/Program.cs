@@ -1,41 +1,33 @@
-﻿namespace ConstantsC
+﻿namespace TryCatchFinally
 {
-    internal class Program
+    class Program
     {
-        const string name1 = "Michael";
-        const string name2 = "Lisa";
-        const string name3 = "Lily";
 
         static void Main(string[] args)
         {
-            Console.WriteLine(AddTwoNumbers());
-            Console.WriteLine(Calculate());
-            Console.Read();
+            Console.WriteLine("Please enter a number!");
+            string input = Console.ReadLine()!;
+            try
+            {
+                int userInputAsInt = int.Parse(input);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Format exception, please enter the correct type next time.");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Overflow exception, the number was too long or too shor for an int32.");
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("ArgumentNullException, ThreadExceptionEventArgs values was empty (Null)");
+            } finally
+            {
+                Console.WriteLine("This is called anyways!");
+            };
 
-        }
-
-        public static double AddTwoNumbers()
-        {
-            Console.WriteLine("Please the first number");
-            string num1 = Console.ReadLine()!;
-            Console.WriteLine("Please the second number");
-            string num2 = Console.ReadLine()!;
-            double sum = double.Parse(num1) + double.Parse(num2);
-            return sum;
-        }
-
-        public static int Calculate()
-        {
-            Console.WriteLine("Please enter the first number");
-            string number1Input = Console.ReadLine()!;
-            Console.WriteLine("Please enter the second number");
-            string number2Input = Console.ReadLine()!;
-
-            int num1 = int.Parse(number1Input);
-            int num2 = int.Parse(number2Input);
-
-            int result = num1 + num2;
-            return result;
+            Console.ReadKey();
         }
 
     }
