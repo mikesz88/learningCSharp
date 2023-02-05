@@ -5,7 +5,23 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a number!");
+            int num1 = 5;
+            int num2 = 0;
+            int result;
+
+            try
+            {
+                result = num1 / num2;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by 0");
+            }
+            finally
+            {
+                Console.WriteLine("This is called anyways!");
+            }
+            /*Console.WriteLine("Please enter a number!");
             string input = Console.ReadLine()!;
             try
             {
@@ -22,10 +38,11 @@
             catch (ArgumentNullException)
             {
                 Console.WriteLine("ArgumentNullException, ThreadExceptionEventArgs values was empty (Null)");
-            } finally
+            } 
+            finally
             {
                 Console.WriteLine("This is called anyways!");
-            };
+            };*/
 
             Console.ReadKey();
         }
