@@ -5,24 +5,31 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Write a number.");
-            string input = Console.ReadLine();
-            int num;
-            int.TryParse(input, out num);
-            EvenOrOdd(num);
-            Console.ReadKey();
+            Console.WriteLine("Please provide a number");
+            string stringAsNumber = Console.ReadLine()!;
+            int num = int.Parse(stringAsNumber);
+            NestedCheck(num);
         }
-
-        public static void EvenOrOdd(int value)
+        static void NestedCheck(int number)
         {
-            bool result = value % 2 == 0;
-            if (result)
+            if (number % 3 == 0)
             {
-                Console.WriteLine("Even");
-            } else
+                Console.WriteLine("Divisible by 3.");
+            } 
+            else if (number % 7 == 0)
             {
-                Console.WriteLine("Odd");
+                Console.WriteLine("Divisible by 7.");
+            } 
+            else if (number % 2 == 1)
+            {
+                Console.WriteLine("Odd number.");
+            } 
+            else 
+            {
+                Console.WriteLine("Even number.");
             }
+
+
         }
 
     }
