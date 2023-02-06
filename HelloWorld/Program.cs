@@ -5,19 +5,33 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("What is the temperature like?");
-            string temperatureString;
-            temperatureString = Console.ReadLine()!;
-            int temperature= Int32.Parse(temperatureString);
-            if (temperature < 50)
+            /*string numberAsString = "128";
+
+            int parsedValue;
+
+            bool success = int.TryParse(numberAsString, out parsedValue);
+            
+            if (success)
             {
-                Console.WriteLine("Take the coat");
-            } else if (temperature > 50)
-            {
-                Console.WriteLine("Beach Weather!");
+                Console.WriteLine("Parsing successful - number is " + parsedValue);
             } else
             {
-                Console.WriteLine($"It is {temperature} degrees Farenheit");
+                Console.WriteLine("Parsing failed");
+            }*/
+
+            string numberAsString = "128.75xyz";
+
+            float parsedValue;
+
+            bool success = float.TryParse(numberAsString, out parsedValue);
+
+            if (success)
+            {
+                Console.WriteLine("Parsing successful - number is " + parsedValue);
+            }
+            else
+            {
+                Console.WriteLine("Parsing failed");
             }
 
             Console.ReadKey();
