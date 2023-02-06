@@ -1,37 +1,28 @@
-﻿namespace TryCatchFinally
+﻿namespace Coding.Exercise
 {
-    class Program
+    public class Exercise
     {
 
         static void Main(string[] args)
         {
-            Console.WriteLine("What is the temperature like?");
-            string temperatureString;
-            temperatureString = Console.ReadLine()!;
-            int temperature;
-            int number;
-
-            if (int.TryParse(temperatureString, out number)) 
-            { 
-                temperature = number;
-            } else
-            {
-                temperature = 0;
-                Console.WriteLine("Value entered, was not a number. 0 set as a temparature");
-            }
-
-            if (temperature < 50)
-            {
-                Console.WriteLine("Take the coat");
-            } else if (temperature > 50)
-            {
-                Console.WriteLine("Beach Weather!");
-            } else
-            {
-                Console.WriteLine($"It is {temperature} degrees Farenheit");
-            }
-
+            Console.WriteLine("Write a number.");
+            string input = Console.ReadLine();
+            int num;
+            int.TryParse(input, out num);
+            EvenOrOdd(num);
             Console.ReadKey();
+        }
+
+        public static void EvenOrOdd(int value)
+        {
+            bool result = value % 2 == 0;
+            if (result)
+            {
+                Console.WriteLine("Even");
+            } else
+            {
+                Console.WriteLine("Odd");
+            }
         }
 
     }
