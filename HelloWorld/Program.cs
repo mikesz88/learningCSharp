@@ -2,55 +2,46 @@
 {
     public class Exercise
     {
+        static string username, password;
         static void Main(string[] args)
         {
-            string username, password;
-            string[] credentials = new string[2];
-            credentials = registerUser();
+            Register();
+            Login();
+            Console.ReadKey();
+        }
 
-            username= credentials[0];
-            password= credentials[1];
+        public static void Register()
+        {
+            Console.WriteLine("Please enter your username");
+            username = Console.ReadLine()!;
+            Console.WriteLine("Please enter your password");
+            password = Console.ReadLine()!;
+            Console.WriteLine("Registration Completed");
+            Console.WriteLine("-----------------------");
+        }
 
-            bool loginStatus = loginUser(username, password);
-            
-            if (loginStatus)
+        public static void Login()
+        {
+            Console.WriteLine("Please enter your username");
+            if (username == Console.ReadLine())
             {
-                Console.WriteLine("You are logged in");
+                Console.WriteLine("Please enter your password");
+                if (password == Console.ReadLine())
+                {
+                    Console.WriteLine("Login Successful");
+                }
+                else
+                {
+                    Console.WriteLine("Login failed, wrong password. Restart Program");
+                }
             }
             else
             {
-                Console.WriteLine("Invalid Username and Password");
-            }
 
-
-
-        }
-
-        static string[] registerUser()
-        {
-            Console.WriteLine("What username would you like?");
-            string username = Console.ReadLine()!;
-            Console.WriteLine("What password would you like?");
-            string password = Console.ReadLine()!;
-            string[] credentials = new string[2] { username, password };
-            return credentials;
-        }
-
-        static bool loginUser(string username, string password)
-        {
-            Console.WriteLine("Please login by writing your username and password ");
-            Console.WriteLine("Username: ");
-            string attemptedUsername = Console.ReadLine()!;
-            Console.WriteLine("Password: ");
-            string attemptedPassword = Console.ReadLine()!;
-            if (attemptedUsername.Equals(username) && attemptedPassword.Equals(password))
-            {
-                return true;
-            } else
-            {
-                return false;
+            Console.WriteLine("Login failed, wrong password. Restart Program");
             }
         }
+
 
     }
 }
