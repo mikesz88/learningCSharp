@@ -5,33 +5,30 @@
 
         static void Main(string[] args)
         {
-            /*string numberAsString = "128";
+            Console.WriteLine("What is the temperature like?");
+            string temperatureString;
+            temperatureString = Console.ReadLine()!;
+            int temperature;
+            int number;
 
-            int parsedValue;
-
-            bool success = int.TryParse(numberAsString, out parsedValue);
-            
-            if (success)
-            {
-                Console.WriteLine("Parsing successful - number is " + parsedValue);
+            if (int.TryParse(temperatureString, out number)) 
+            { 
+                temperature = number;
             } else
             {
-                Console.WriteLine("Parsing failed");
-            }*/
-
-            string numberAsString = "128.75xyz";
-
-            float parsedValue;
-
-            bool success = float.TryParse(numberAsString, out parsedValue);
-
-            if (success)
-            {
-                Console.WriteLine("Parsing successful - number is " + parsedValue);
+                temperature = 0;
+                Console.WriteLine("Value entered, was not a number. 0 set as a temparature");
             }
-            else
+
+            if (temperature < 50)
             {
-                Console.WriteLine("Parsing failed");
+                Console.WriteLine("Take the coat");
+            } else if (temperature > 50)
+            {
+                Console.WriteLine("Beach Weather!");
+            } else
+            {
+                Console.WriteLine($"It is {temperature} degrees Farenheit");
             }
 
             Console.ReadKey();
