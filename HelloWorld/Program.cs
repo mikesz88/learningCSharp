@@ -12,26 +12,29 @@
             // not as (a ? b : c ) ? d : e.
             // The conditional operator cannot be overloaded.
 
-            int temperature = -5;
-            string stateOfMatter;
-
-            if (temperature < 0)
+            int temperature;
+            Console.WriteLine("Please write the temperature");
+            string tempString = Console.ReadLine()!;
+            bool isANum = int.TryParse(tempString, out temperature);
+            if (isANum)
             {
-                stateOfMatter = "solid";
+                checkTemp(temperature);
             }
             else
             {
-                stateOfMatter = "liquid";
+                Console.WriteLine("Not a valid Temperature");
             }
-
-            Console.WriteLine("State of matter is {0}", stateOfMatter);
-
-            temperature += 110;
-
-            // in short
-            stateOfMatter = temperature < 0 ? "solid" : temperature > 100 ? "gas" : "liquid";
-            Console.WriteLine("State of matter is {0}", stateOfMatter);
             Console.ReadKey();
+        }
+
+        static void checkTemp(int temperature)
+        {
+            string message = temperature <= 15 
+                ? "It is too cold here"
+                : temperature > 28
+                ? "It is too hot here"
+                : "It is ok";
+            Console.WriteLine(message);
         }
 
 
