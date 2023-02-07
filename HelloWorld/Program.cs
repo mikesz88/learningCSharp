@@ -2,45 +2,58 @@
 {
     public class Exercise
     {
-        static string username, password;
         static void Main(string[] args)
         {
-            Register();
-            Login();
-            Console.ReadKey();
-        }
+            int age = 25;
 
-        public static void Register()
-        {
-            Console.WriteLine("Please enter your username");
-            username = Console.ReadLine()!;
-            Console.WriteLine("Please enter your password");
-            password = Console.ReadLine()!;
-            Console.WriteLine("Registration Completed");
-            Console.WriteLine("-----------------------");
-        }
-
-        public static void Login()
-        {
-            Console.WriteLine("Please enter your username");
-            if (username == Console.ReadLine())
+            switch(age)
             {
-                Console.WriteLine("Please enter your password");
-                if (password == Console.ReadLine())
-                {
-                    Console.WriteLine("Login Successful");
-                }
-                else
-                {
-                    Console.WriteLine("Login failed, wrong password. Restart Program");
-                }
+                case 15:
+                    Console.WriteLine("Too young to party in the club!");
+                    break;
+                case 25:
+                    Console.WriteLine("Good to go!");
+                    break;
+                default:
+                    Console.WriteLine("How old are you then?");
+                    break;
+            }
+
+            if (age == 15)
+            {
+                Console.WriteLine("Too young to party in the club!");
+            }
+            else if (age == 25)
+            {
+                 Console.WriteLine("Good to go!");
             }
             else
             {
-
-            Console.WriteLine("Login failed, wrong password. Restart Program");
+                Console.WriteLine("How old are you then?");
             }
+
+            string username = "Michael";
+
+            switch (username)
+            {
+                case "Michael":
+                    Console.WriteLine("Username is Michael");
+                    break;
+                case "root":
+                    Console.WriteLine("username is root");
+                    break;
+                default:
+                    Console.WriteLine("username is unknown");
+                    break;
+
+            }
+
+
+            Console.ReadKey();
         }
+
+
+
 
 
     }
