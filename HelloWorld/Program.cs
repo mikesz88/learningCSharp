@@ -1,34 +1,37 @@
-﻿namespace Coding.Exercise
+﻿namespace EnhancedIfStatement
 {
     public class Exercise
     {
-        static int highscore = 300;
-        static string highscorePlayer = "Denise";
         static void Main(string[] args)
         {
-            CheckHighScore(250, "Maria");
-            CheckHighScore(315, "Michael");
-            CheckHighScore(350, "Denis");
+            // condition ? first_expression : second_expression;
+            // condition has to be either true or false
+            // The conditional operator is right - associative.
+            // The expression a ? b : c ? d : e
+            // is evaluated as a ? b : (c ? d : e),
+            // not as (a ? b : c ) ? d : e.
+            // The conditional operator cannot be overloaded.
 
-            Console.ReadKey();
-        }
+            int temperature = -5;
+            string stateOfMatter;
 
-        public static void CheckHighScore(int score, string playerName)
-        {
-            if (score > highscore)
+            if (temperature < 0)
             {
-                highscore = score;
-                highscorePlayer = playerName;
-
-                Console.WriteLine("New highscore is " + score);
-                Console.WriteLine("It is now held by " + playerName);
-            } 
+                stateOfMatter = "solid";
+            }
             else
             {
-                Console.WriteLine("The old highscore could not be broken. It is still " 
-                    + highscore + " and held by " 
-                    + highscorePlayer);
+                stateOfMatter = "liquid";
             }
+
+            Console.WriteLine("State of matter is {0}", stateOfMatter);
+
+            temperature += 110;
+
+            // in short
+            stateOfMatter = temperature < 0 ? "solid" : temperature > 100 ? "gas" : "liquid";
+            Console.WriteLine("State of matter is {0}", stateOfMatter);
+            Console.ReadKey();
         }
 
 
