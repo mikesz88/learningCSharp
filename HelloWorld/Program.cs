@@ -2,56 +2,30 @@
 {
     public class Exercise
     {
+        static int score, highscore;
+        static string highscorePlayer;
         static void Main(string[] args)
         {
-            int age = 25;
-
-            switch(age)
-            {
-                case 15:
-                    Console.WriteLine("Too young to party in the club!");
-                    break;
-                case 25:
-                    Console.WriteLine("Good to go!");
-                    break;
-                default:
-                    Console.WriteLine("How old are you then?");
-                    break;
-            }
-
-            if (age == 15)
-            {
-                Console.WriteLine("Too young to party in the club!");
-            }
-            else if (age == 25)
-            {
-                 Console.WriteLine("Good to go!");
-            }
-            else
-            {
-                Console.WriteLine("How old are you then?");
-            }
-
-            string username = "Michael";
-
-            switch (username)
-            {
-                case "Michael":
-                    Console.WriteLine("Username is Michael");
-                    break;
-                case "root":
-                    Console.WriteLine("username is root");
-                    break;
-                default:
-                    Console.WriteLine("username is unknown");
-                    break;
-
-            }
-
-
-            Console.ReadKey();
+            Console.WriteLine("What is the name of the player?");
+            string newPlayer = Console.ReadLine()!;
+            Console.WriteLine($"What score did {newPlayer} get?");
+            int newScore = int.Parse(Console.ReadLine()!);
+            GameOver(newScore, newPlayer);
         }
 
+        public static void GameOver(int score, string playerName)
+        {
+            if (score > highscore)
+            {
+                Console.WriteLine($"New highscore is {score}");
+                Console.WriteLine($"New highscore holder is {playerName}");
+                highscore = score;
+                highscorePlayer = playerName;
+            } else
+            {
+                Console.WriteLine($"The old highscore of {highscore} could not be broken and is still held by {highscorePlayer}");
+            }
+        }
 
 
 
