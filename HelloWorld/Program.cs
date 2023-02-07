@@ -2,31 +2,34 @@
 {
     public class Exercise
     {
-        static int score, highscore;
-        static string highscorePlayer;
+        static int highscore = 300;
+        static string highscorePlayer = "Denise";
         static void Main(string[] args)
         {
-            Console.WriteLine("What is the name of the player?");
-            string newPlayer = Console.ReadLine()!;
-            Console.WriteLine($"What score did {newPlayer} get?");
-            int newScore = int.Parse(Console.ReadLine()!);
-            GameOver(newScore, newPlayer);
+            CheckHighScore(250, "Maria");
+            CheckHighScore(315, "Michael");
+            CheckHighScore(350, "Denis");
+
+            Console.ReadKey();
         }
 
-        public static void GameOver(int score, string playerName)
+        public static void CheckHighScore(int score, string playerName)
         {
             if (score > highscore)
             {
-                Console.WriteLine($"New highscore is {score}");
-                Console.WriteLine($"New highscore holder is {playerName}");
                 highscore = score;
                 highscorePlayer = playerName;
-            } else
+
+                Console.WriteLine("New highscore is " + score);
+                Console.WriteLine("It is now held by " + playerName);
+            } 
+            else
             {
-                Console.WriteLine($"The old highscore of {highscore} could not be broken and is still held by {highscorePlayer}");
+                Console.WriteLine("The old highscore could not be broken. It is still " 
+                    + highscore + " and held by " 
+                    + highscorePlayer);
             }
         }
-
 
 
 
