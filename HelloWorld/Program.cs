@@ -4,14 +4,17 @@
     {
         static void Main(string[] args)
         {
-            for(int counter = 0; counter <= 20; counter++)
+            int lengthOfText = 0;
+            string wholeText = "";
+            do
             {
-                if (counter % 2 == 1)
-                {
-                    Console.WriteLine(counter);
-                }
-            }
-            Console.WriteLine("For loop is done");
+                Console.WriteLine("Please enter the name of a friend");
+                string nameOfAFriend = Console.ReadLine();
+                int currentLength = nameOfAFriend.Length;
+                lengthOfText += currentLength;
+                wholeText += nameOfAFriend;
+            } while (lengthOfText < 20);
+            Console.WriteLine("Thanks, that was enough!" + wholeText);
             Console.ReadKey();
         }
 
