@@ -1,33 +1,20 @@
-﻿namespace WhileLoop
+﻿namespace HelloWorld;
+
+public class Exercise
 {
-    public class Exercise
+
+    static void Main(string[] args)
     {
-
-        static void Main(string[] args)
+        for (int counter = 0; counter < 10; counter++)
         {
-            WhileLoop();
-            ForLoop();
-        }
-
-        public static void ForLoop()
-        {
-            // TODO
-            for (int i = -3; i <= 3; i++)
+            if (counter % 2 == 0)
             {
-                Console.WriteLine(i);
+                Console.WriteLine($"Now comes an odd number");
+                continue;
             }
+            Console.WriteLine(counter);
         }
-
-        public static void WhileLoop()
-        {
-            // TODO
-            int i = 3;
-            while (i >= -3)
-            {
-                Console.WriteLine(i);
-                i--;
-            }
-        }
-
+        Console.ReadKey();
     }
+
 }
