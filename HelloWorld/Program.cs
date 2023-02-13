@@ -4,17 +4,24 @@
     {
         static void Main(string[] args)
         {
-            int lengthOfText = 0;
-            string wholeText = "";
-            do
+            int counter = 0;
+
+            while (counter <= 20)
             {
-                Console.WriteLine("Please enter the name of a friend");
-                string nameOfAFriend = Console.ReadLine();
-                int currentLength = nameOfAFriend.Length;
-                lengthOfText += currentLength;
-                wholeText += nameOfAFriend;
-            } while (lengthOfText < 20);
-            Console.WriteLine("Thanks, that was enough!" + wholeText);
+                Console.WriteLine("Press Enter");
+                char isEnter = Console.ReadKey().KeyChar;
+                Console.WriteLine($"isEnter is: {isEnter}");
+                if (isEnter.Equals((char)13))
+                {
+                    Console.WriteLine($"{counter} people have entered the bus");
+                    counter++;
+                }
+                else
+                {
+                    Console.WriteLine("Please only press enter.");
+                }
+                
+            }
             Console.ReadKey();
         }
 
