@@ -5,16 +5,24 @@ public class Exercise
 
     static void Main(string[] args)
     {
-        for (int counter = 0; counter < 10; counter++)
-        {
-            if (counter % 2 == 0)
+
+            int i = -10;
+
+            while (i < 10)
             {
-                Console.WriteLine($"Now comes an odd number");
-                continue;
+
+                // TODO
+                if (i % 3 == 0)
+                {
+                    i++;
+                    continue;
+                }
+                if (i % 6 == 0)
+                {
+                    break;
+                }
+                Console.WriteLine(i++);
             }
-            Console.WriteLine(counter);
-        }
-        Console.ReadKey();
     }
 
 }
