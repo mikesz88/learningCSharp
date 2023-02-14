@@ -7,54 +7,40 @@ public class Exercise
 
     static void Main(string[] args)
     {
-        bool continueLoop = true;
-        int counter = 0;
-        float sum = 0;
+        string input = "0";
+        int count = 0;
+        int total = 0;
+        int currentNumber = 0;
 
-        while (continueLoop)
+        while (input != "-1")
         {
-            Console.WriteLine("Please write a number");
-            Console.WriteLine("Please write -1 when you are done.");
-            string input = GetInput();
-            float newNum;
-
-
-            if (input == null || float.TryParse(input, out newNum) == false)
-            {
-                Console.WriteLine("Please provide a number.");
-                continueLoop = true;
-                continue;
-            }
-
-            float.TryParse(input, out newNum);
-
-            if (newNum == -1)
-            {
-                float average = sum / counter;
-                Console.WriteLine($"The average number is {average}");
-                continueLoop = false;
-                continue;
-            }
+            Console.WriteLine($"Last number was {currentNumber}");
+            Console.WriteLine("Please enter the next score");
+            Console.WriteLine($"Current amount of entries: {count}");
+            Console.WriteLine("Please -1 once you are ready to calculate the average.");
             
-            if (newNum < 0 || newNum > 20)
+            input = Console.ReadLine();
+            if (input.Equals("-1"))
             {
-                Console.WriteLine("The number must be between 0 and 20.");
-                continueLoop = true;
+                Console.WriteLine("----------------------------------------------------------");
+                double average = (double)total / (double)count;
+                Console.WriteLine($"The average score of your students is {average}");
+            }
+            if (int.TryParse(input, out currentNumber) && currentNumber > 0 && currentNumber < 21)
+            {
+                total += currentNumber;
+            } else
+            {
+                if (!input.Equals("-1"))
+                {
+                    Console.WriteLine("Please enter a value between 1 and 20!");
+
+                }
                 continue;
             }
-
-            sum += newNum;
-            counter++;
-            Console.WriteLine($"Sum is {sum}");
-            Console.WriteLine($"counter is {counter}");
+            count++;
         }
-        
-    }
-
-    public static string GetInput()
-    {
-        return Console.ReadLine();
-        
+        Console.ReadLine();
     }
 
 }
