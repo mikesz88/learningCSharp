@@ -11,11 +11,12 @@ namespace ClassesBasics
     {
         // member variable
         public string firstName;
+        public string lastName;
 
-        // member
+        // member method
         public void IntroduceMyself()
         {
-            Console.WriteLine($"Hi, I'm {firstName}");
+            Console.WriteLine($"Hi, I'm {firstName} {lastName}");
         }
     }
 }

@@ -13,11 +13,15 @@ public class Program
         Human michael = new Human();
         // access public variable from outside, and even change it
         michael.firstName = "Michael";
+        michael.lastName = "Sanchez";
         // call methods of the class
         michael.IntroduceMyself();
 
         Human lisa = new Human();
+        lisa.firstName = "Lisa";
+        lisa.lastName = "Sanchez";
         lisa.IntroduceMyself();
+
 
         Console.ReadKey();
     }
