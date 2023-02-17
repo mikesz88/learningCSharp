@@ -9,34 +9,72 @@ namespace ClassesBasics
     // this class is a blueprint for a datatype
     class Human
     {
-
         // member variable
         private string firstName;
         private string lastName;
         private string eyeColor;
         private int age;
 
-        // constructor
-        public Human(string firstName, string myLastName, string eyeColor, int age)
+        // default constructor
+        public Human()
+        {
+            Console.WriteLine("Constructor called. Object created");
+        }
+
+        public Human(string firstName)
         {
             this.firstName = firstName;
-            lastName = myLastName;
+        }
+
+        public Human(string firstName, string lastName)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public Human(string firstName, string lastName, string eyeColor)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.eyeColor = eyeColor;
+        }
+
+        public Human(string firstName, string lastName, int age)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+        }
+
+        // parameterized constructor
+        public Human(string firstName, string lastName, string eyeColor, int age)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
             this.eyeColor = eyeColor;
             this.age = age;
         }
 
+
+
         // member method
         public void IntroduceMyself()
         {
-            if (age == 1)
+            if (age != 0 && lastName != null && eyeColor != null && firstName != null)
+                Console.WriteLine("Hi, I'm {0} {1} and {2} years old. My eye color is {3}", firstName, lastName, age, eyeColor);
+            else if (age != 0 && lastName != null && firstName != null)
             {
-                Console.WriteLine($"Hi, I'm {firstName} {lastName}. My eye color is {eyeColor} and I am {age} year old");
+                Console.WriteLine("Hi, I'm {0} {1} and {2} years old.", firstName, lastName, age);
+            }
+            else if (lastName != null && firstName != null)
+            {
+                Console.WriteLine("Hi, I'm {0} {1}.", firstName, lastName);
+            }
+            else if (firstName != null)
+            {
+                Console.WriteLine("Hi, I'm {0} ", firstName);
+            }
 
-            }
-            else
-            {
-                Console.WriteLine($"Hi, I'm {firstName} {lastName}. My eye color is {eyeColor} and I am {age} years old");
-            }
         }
     }
 }
