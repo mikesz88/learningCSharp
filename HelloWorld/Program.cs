@@ -8,10 +8,10 @@ public class Program
 
     static void Main(string[] args)
     {
-        Human michael = new Human("Michael", "Sanchez");
+        Human michael = new Human("Michael", "Sanchez", "brown", 34);
         michael.IntroduceMyself();
 
-        Human lisa = new Human("Lisa", "Sanchez");
+        Human lisa = new Human("Lisa", "Sanchez", "brown", 33);
         lisa.IntroduceMyself();
 
 
