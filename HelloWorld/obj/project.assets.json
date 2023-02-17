@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mikes\\Desktop\\CodingWindowFiles\\CSharpTraining\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
-      "projectName": "HelloWorld",
-      "projectPath": "C:\\Users\\mikes\\Desktop\\CodingWindowFiles\\CSharpTraining\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
+      "projectUniqueName": "C:\\Users\\mikes\\Desktop\\CodingWindowFiles\\CSharpTraining\\HelloWorld\\HelloWorld\\ClassesBasics.csproj",
+      "projectName": "ClassesBasics",
+      "projectPath": "C:\\Users\\mikes\\Desktop\\CodingWindowFiles\\CSharpTraining\\HelloWorld\\HelloWorld\\ClassesBasics.csproj",
       "packagesPath": "C:\\Users\\mikes\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mikes\\Desktop\\CodingWindowFiles\\CSharpTraining\\HelloWorld\\HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

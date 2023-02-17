@@ -1,0 +1,15 @@
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\bin\Debug\net6.0\ClassesBasics.exe
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\bin\Debug\net6.0\ClassesBasics.deps.json
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\bin\Debug\net6.0\ClassesBasics.runtimeconfig.json
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\bin\Debug\net6.0\ClassesBasics.dll
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\bin\Debug\net6.0\ClassesBasics.pdb
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.csproj.AssemblyReference.cache
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.AssemblyInfoInputs.cache
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.AssemblyInfo.cs
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.csproj.CoreCompileInputs.cache
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.dll
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\refint\ClassesBasics.dll
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.pdb
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ClassesBasics.genruntimeconfig.cache
+C:\Users\mikes\Desktop\CodingWindowFiles\CSharpTraining\HelloWorld\HelloWorld\obj\Debug\net6.0\ref\ClassesBasics.dll
