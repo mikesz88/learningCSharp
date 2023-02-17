@@ -11,7 +11,7 @@ public class Program
         Human michael = new Human("Michael", "Sanchez", "brown", 34);
         michael.IntroduceMyself();
 
-        Human lisa = new Human("Lisa", "Sanchez", "brown", 33);
+        Human lisa = new Human("Lisa", "Sanchez", "brown", 1);
         lisa.IntroduceMyself();
 
 

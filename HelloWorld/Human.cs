@@ -28,7 +28,15 @@ namespace ClassesBasics
         // member method
         public void IntroduceMyself()
         {
-            Console.WriteLine($"Hi, I'm {firstName} {lastName}. My eye color is {eyeColor} and I am {age} years old");
+            if (age == 1)
+            {
+                Console.WriteLine($"Hi, I'm {firstName} {lastName}. My eye color is {eyeColor} and I am {age} year old");
+
+            }
+            else
+            {
+                Console.WriteLine($"Hi, I'm {firstName} {lastName}. My eye color is {eyeColor} and I am {age} years old");
+            }
         }
     }
 }
