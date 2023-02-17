@@ -8,18 +8,10 @@ public class Program
 
     static void Main(string[] args)
     {
-        // Create an object of my class
-        // an instance of Human
-        Human michael = new Human();
-        // access public variable from outside, and even change it
-        michael.firstName = "Michael";
-        michael.lastName = "Sanchez";
-        // call methods of the class
+        Human michael = new Human("Michael", "Sanchez");
         michael.IntroduceMyself();
 
-        Human lisa = new Human();
-        lisa.firstName = "Lisa";
-        lisa.lastName = "Sanchez";
+        Human lisa = new Human("Lisa", "Sanchez");
         lisa.IntroduceMyself();
 
 
